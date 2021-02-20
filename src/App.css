@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-size: 3.15em;
+    font-weight: 800;
+}
+
+h5 {
+    color: rgb(201, 201, 201);
+}
+
+.paginations{
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.page{
+	padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.page a {
+    font-size: 13px;   
+}
+
+.disabled{
+    cursor: not-allowed;
+}
+
+.active{
+	border: 2px solid #000;
+    background-color: rgb(60, 62, 68);
+    font-weight: bold;
+    color: white;
+}
+
+.previous{
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.break{
+    padding: 10px;
+}
+
+.next{
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./rick&morty.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+header img {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.content {
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    padding: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.loader img{
+    animation: load 1s linear infinite;
+}
+
+.characters ul {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+    margin: 0.735rem 0;
+    box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.8);
+    background-color: rgb(60, 62, 68);
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    line-height: 0;
+    flex-direction: column;
+}
+
+.card img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 300px;
+    object-position: center center;
+    object-fit: cover;
+}
+
+.description {
+    padding: 10px 20px;
+}
+
+.status_wrap {
+    display: flex;
+    align-items: center;
+}
+
+.status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.alive {
+    background-color: rgb(0, 223, 108);
+    
+}
+
+.dead {
+    background-color: rgb(233, 22, 22);
+}
+
+.unknow {
+    background-color: rgb(158, 158, 158);
+}
+
+.location {
+    margin-top: 60px;
+}
+
+footer {
+    background-color: rgb(10, 10, 10);
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.social-media {
+    width: 50px;
+}
+
+.social-media img:hover {
+    opacity: 0.6;
+}
+
+
+@keyframes load {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (min-width: 650px) {
+
+    h1 {
+        font-size: 3.75em;
+    }
+
+    .card {
+        flex-direction: row;
+        width: 600px;
+        height: 220px;
+    }
+    .card img {
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 5.625em;
+    }
+    .characters ul {
+        flex-direction: row;
+    }   
+    
+    .card {
+        margin: 0.735rem;
+    }
+}
